@@ -1,0 +1,69 @@
+{
+  "name": "FoodItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the food item"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the food"
+    },
+    "price": {
+      "type": "number",
+      "description": "Original price in rupees"
+    },
+    "discount_percent": {
+      "type": "number",
+      "description": "Discount percentage (0-100)"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the food image"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "snacks",
+        "dinner"
+      ],
+      "description": "Meal category"
+    },
+    "meal_time": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night"
+      ],
+      "description": "Time of day for this meal"
+    },
+    "is_veg": {
+      "type": "boolean",
+      "description": "Whether the item is vegetarian"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether item is currently available"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average rating out of 5"
+    },
+    "prep_time": {
+      "type": "number",
+      "description": "Preparation time in minutes"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category",
+    "meal_time"
+  ]
+}
