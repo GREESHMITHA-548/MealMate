@@ -1,0 +1,41 @@
+{
+  "name": "CartItem",
+  "type": "object",
+  "properties": {
+    "food_item_id": {
+      "type": "string",
+      "description": "Reference to the food item"
+    },
+    "food_name": {
+      "type": "string",
+      "description": "Name of the food item"
+    },
+    "food_image": {
+      "type": "string",
+      "description": "Image URL of the food"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Number of items"
+    },
+    "unit_price": {
+      "type": "number",
+      "description": "Price per unit after discount"
+    },
+    "original_price": {
+      "type": "number",
+      "description": "Original price before discount"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user who added this item"
+    }
+  },
+  "required": [
+    "food_item_id",
+    "food_name",
+    "quantity",
+    "unit_price",
+    "user_email"
+  ]
+}
